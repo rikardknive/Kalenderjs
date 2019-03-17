@@ -1,14 +1,16 @@
-var today = new Date()
-var weeknumber = dateFns.getISOWeek(today);
-var year = today.getFullYear();
-var relativeDay = today;
 
-var events = {}
-var eventDays = ['monday-events', 'tuesday-events', 'wednesday-events', 'thursday-events', 'friday-events', 'saturday-events', 'sunday-events'];
 
 
 $(document).ready(function(){
     //console.log('ready!');
+
+    var today = new Date()
+    var weeknumber = dateFns.getISOWeek(today);
+    var year = today.getFullYear();
+    var relativeDay = today;
+    
+    var events = {}
+    var eventDays = ['monday-events', 'tuesday-events', 'wednesday-events', 'thursday-events', 'friday-events', 'saturday-events', 'sunday-events'];
 
     updateScreen();
     set_dates(relativeDay);
@@ -57,7 +59,7 @@ $(document).ready(function(){
         $('.cd-schedule').removeClass('js-full');
         // Add events again
         loadWeek(events, weeknumber, year);
-        updateEvents();
+        
     }
     
     
@@ -98,13 +100,14 @@ $(document).ready(function(){
                 }
             })
         });
+        updateEvents();
     
     }
     
     function updateEvents() {
         $.getScript("static/styles/js/main.js", function() {
             //console.log('hei');
-            scheduleScript();
+           // scheduleScript();
         })
     }
     

@@ -1,5 +1,5 @@
-//jQuery(document).ready(function($){
-function scheduleScript() {
+jQuery(document).ready(function($){
+//function scheduleScript() {
 	//console.log('hei')
 
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
@@ -173,8 +173,8 @@ function scheduleScript() {
 				eventHeight = event.innerHeight(),
 				eventWidth = event.innerWidth();
 
-			var windowWidth = $(window).width(),
-				windowHeight = $(window).height();
+			var windowWidth = $(window)["0"].innerWidth;
+				windowHeight = $(window)["0"].innerHeight;
 
 			var modalWidth = ( windowWidth*.8 > self.modalMaxWidth ) ? self.modalMaxWidth : windowWidth*.8,
 				modalHeight = ( windowHeight*.8 > self.modalMaxHeight ) ? self.modalMaxHeight : windowHeight*.8;
@@ -420,4 +420,4 @@ function scheduleScript() {
 			'transform': value
 		});
 	}
-};
+});
