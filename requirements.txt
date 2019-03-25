@@ -1,0 +1,4 @@
+flask
+jellyfish
+requests
+icalendar
