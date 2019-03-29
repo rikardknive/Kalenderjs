@@ -2392,8 +2392,10 @@
   width: -10px;
   background: #0b5b95;
   border: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-top: 10px;
   color: #ffffff;
   border-radius: 5px;
   margin-top: -33px;
@@ -4418,9 +4420,10 @@
       width: -10px;
       background: #0b5b95;
       border: 0;
-      padding-left: 3px;
-      padding-right: 3px;
-      padding-bottom: 15px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 20px;
+      padding-top: 5px;
       color: #ffffff;
       border-radius: 5px;
       margin-top: -40px;
@@ -4687,7 +4690,7 @@ Main Components
   font-size: 2.4rem; }
   @media only screen and (min-width: 800px) {
     .cd-schedule .event-name {
-      font-size: 2rem; } }
+      font-size: 1.7rem; } }
 
 .cd-schedule .event-date {
   /* they are not included in the the HTML but added using JavScript */
