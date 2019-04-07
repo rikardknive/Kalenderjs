@@ -98,9 +98,6 @@ $(document).ready(function(){
                     var eventSlotHeight = $('ul.'+ eventDay).parent('li').children('.top-info').outerHeight();
                     
                     var multi = 1;
-                   
-                   
-
                     
                     if (isMobile) {
                         if (durasjon <= getScheduleTimestamp('01:50')) {
@@ -129,7 +126,7 @@ $(document).ready(function(){
         
     
     }
-    
+    /*
     
     function set_dates(date) {
         
@@ -150,6 +147,7 @@ $(document).ready(function(){
         //console.log(returnDate.getDate() );
         return returnDate.getDate() + '.' + (returnDate.getMonth()+1);
     }
+    */
     
     function getScheduleTimestamp(time) {
         //accepts hh:mm format - convert hh:mm to timestamp
@@ -158,6 +156,40 @@ $(document).ready(function(){
         var timeStamp = parseInt(timeArray[0])*60 + parseInt(timeArray[1]);
         return timeStamp;
     }
+
+    function set_dates(date) {
+        //var t = new Date(2019, 3, 3);
+        var t = date;
+
+        if (t.getDay() == 0) {
+            var daysFromMonday = 6;
+        } else {
+            var daysFromMonday = t.getDay() - 1;
+        }
+        
+        var mon = dateFns.subDays(t, daysFromMonday);
+        var tue = dateFns.subDays(t, daysFromMonday - 1);
+        var wed = dateFns.subDays(t, daysFromMonday - 2);
+        var thu = dateFns.subDays(t, daysFromMonday - 3);
+        var fri = dateFns.subDays(t, daysFromMonday - 4);
+        var sat = dateFns.subDays(t, daysFromMonday - 5);
+        var sun = dateFns.subDays(t, daysFromMonday - 6);
+
+        $('span.mon').html(get_date(mon));
+        $('span.tue').html(get_date(tue));
+        $('span.wed').html(get_date(wed));
+        $('span.thu').html(get_date(thu));
+        $('span.fri').html(get_date(fri));
+        $('span.sat').html(get_date(sat));
+        $('span.sun').html(get_date(sun));
+       
+    }
+
+    function get_date(date) {
+        return date.getDate() + '.' + (date.getMonth()+1);
+    }
+
+    //get_dates_2();
 
 });
 
