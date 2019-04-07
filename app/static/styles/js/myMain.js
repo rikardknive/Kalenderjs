@@ -158,8 +158,9 @@ $(document).ready(function(){
     }
 
     function set_dates(date) {
-        //var t = new Date(2019, 3, 3);
+        
         var t = date;
+        //t = new Date(2019, 3, 14);
 
         if (t.getDay() == 0) {
             var daysFromMonday = 6;

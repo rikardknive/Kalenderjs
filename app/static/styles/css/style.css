@@ -1256,9 +1256,9 @@
   .nhhs-banner .NHHS-text.text-lighten-3 {
     color: #90CAF9 !important; }
   .nhhs-banner .NHHS.lighten-2 {
-    background-color: #0b5b95 !important; }
+    background-color: #002b4d !important; }
   .nhhs-banner .NHHS-text.text-lighten-2 {
-    color: #0b5b95 !important; }
+    color: #002b4d !important; }
   .nhhs-banner .NHHS.lighten-1 {
     background-color: #42A5F5 !important; }
   .nhhs-banner .NHHS-text.text-lighten-1 {
@@ -1539,7 +1539,7 @@
   .nhhs-banner blockquote {
     margin: 20px 0;
     padding-left: 1.5rem;
-    border-left: 5px solid #0b5b95; }
+    border-left: 5px solid #002b4d; }
   .nhhs-banner i {
     line-height: inherit; }
     .nhhs-banner i.left {
@@ -1575,7 +1575,7 @@
     .nhhs-banner .pagination li.active a {
       color: #fff; }
     .nhhs-banner .pagination li.active {
-      background-color: #0b5b95; }
+      background-color: #002b4d; }
     .nhhs-banner .pagination li.disabled a {
       cursor: default;
       color: #999; }
@@ -1689,7 +1689,7 @@
   .nhhs-banner .page-footer {
     padding-top: 20px;
     color: #fff;
-    background-color: #0b5b95; }
+    background-color: #002b4d; }
     .nhhs-banner .page-footer .footer-copyright {
       overflow: hidden;
       min-height: 50px;
@@ -1935,7 +1935,7 @@
     padding: 0 !important; }
   .nhhs-banner nav {
     color: #fff;
-    background-color: #0b5b95;
+    background-color: #002b4d;
     width: 100%;
     height: 56px;
     line-height: 56px; }
@@ -2390,7 +2390,7 @@
   *******************/
   height: 30px;
   width: -10px;
-  background: #0b5b95;
+  background: #002b4d;
   border: 0;
   padding-left: 25px;
   padding-right: 25px;
@@ -3474,9 +3474,9 @@
   .div1 .btn-small .NHHS-text.text-lighten-3 {
     color: #90CAF9 !important; }
   .div1 .btn-small .NHHS.lighten-2 {
-    background-color: #0b5b95 !important; }
+    background-color: #002b4d !important; }
   .div1 .btn-small .NHHS-text.text-lighten-2 {
-    color: #0b5b95 !important; }
+    color: #002b4d !important; }
   .div1 .btn-small .NHHS.lighten-1 {
     background-color: #42A5F5 !important; }
   .div1 .btn-small .NHHS-text.text-lighten-1 {
@@ -3757,7 +3757,7 @@
   .div1 .btn-small blockquote {
     margin: 20px 0;
     padding-left: 1.5rem;
-    border-left: 5px solid #0b5b95; }
+    border-left: 5px solid #002b4d; }
   .div1 .btn-small i {
     line-height: inherit; }
     .div1 .btn-small i.left {
@@ -3793,7 +3793,7 @@
     .div1 .btn-small .pagination li.active a {
       color: #fff; }
     .div1 .btn-small .pagination li.active {
-      background-color: #0b5b95; }
+      background-color: #002b4d; }
     .div1 .btn-small .pagination li.disabled a {
       cursor: default;
       color: #999; }
@@ -3907,7 +3907,7 @@
   .div1 .btn-small .page-footer {
     padding-top: 20px;
     color: #fff;
-    background-color: #0b5b95; }
+    background-color: #002b4d; }
     .div1 .btn-small .page-footer .footer-copyright {
       overflow: hidden;
       min-height: 50px;
@@ -4153,7 +4153,7 @@
     padding: 0 !important; }
   .div1 .btn-small nav {
     color: #fff;
-    background-color: #0b5b95;
+    background-color: #002b4d;
     width: 100%;
     height: 56px;
     line-height: 56px; }
@@ -4418,7 +4418,7 @@
     .div1 .btn-small {
       height: 15px;
       width: -10px;
-      background: #0b5b95;
+      background: #002b4d;
       border: 0;
       padding-left: 5px;
       padding-right: 5px;
