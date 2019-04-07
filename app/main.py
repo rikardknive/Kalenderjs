@@ -26,5 +26,10 @@ def getKpmgInfo():
     info = gcal.hent_events('kpmg')
     return jsonify(info)
 
+@app.route('/kram/info')
+def getKramInfo():
+    info = gcal.hent_events('kram')
+    return jsonify(info)
+
 if (__name__ == '__main__'):
     app.run(debug=True)

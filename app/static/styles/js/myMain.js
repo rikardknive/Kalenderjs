@@ -10,7 +10,8 @@ $(document).ready(function(){
 
     //console.log(isMobile);
 
-    var today = new Date()
+    //var today = dateFns.subDays(new Date(), 7); // Super duper hack metode for å få riktig relativ dato, men det funker
+    var today = new Date();
     var weeknumber = dateFns.getISOWeek(today);
     var year = today.getFullYear();
     var relativeDay = today;
@@ -20,10 +21,12 @@ $(document).ready(function(){
 
     updateScreen();
     set_dates(relativeDay);
+
+    //console.log(relativeDay);
     
     //console.log($(window).height());
 
-    console.log(window.location.pathname);
+    //console.log(window.location.pathname);
     $('a[href$="'+ window.location.pathname +'"]').parent().addClass('active')
 
     $('.btn-forward').click(function(){
@@ -54,7 +57,7 @@ $(document).ready(function(){
         type: 'GET',
         success: function (data) {
             events = data;
-            //console.log(data)
+            //console.log(data);
             updateMaster();
         }
     });
@@ -142,8 +145,9 @@ $(document).ready(function(){
     
     
     function get_date(startDate, dayOfWeek) {
-        var subAmount = (startDate.getDay()- dayOfWeek);
-        var returnDate = dateFns.subDays(startDate, subAmount);
+        var subAmount = (startDate.getDay() - dayOfWeek);
+        var returnDate = dateFns.subDays(startDate, subAmount + 7);
+        //console.log(returnDate.getDate() );
         return returnDate.getDate() + '.' + (returnDate.getMonth()+1);
     }
     
@@ -154,11 +158,7 @@ $(document).ready(function(){
         var timeStamp = parseInt(timeArray[0])*60 + parseInt(timeArray[1]);
         return timeStamp;
     }
-    
 
-
-
-    
 });
 
 
