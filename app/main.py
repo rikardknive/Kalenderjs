@@ -6,9 +6,10 @@ import gcal
 
 app = Flask(__name__)
 
-@app.route('/', defaults={'cal':'sfo'})
-@app.route('/<cal>', defaults={'cal':'sfo'})
-def hello_world(cal):
+
+#@app.route('/', defaults={'cal':'sfo'})
+@app.route('/')
+def main():
     return render_template('index.html')
 
 @app.route('/sfo/info')
@@ -16,7 +17,12 @@ def getSfoInfo():
     info = gcal.hent_events('sfo')
     return jsonify(info)
 
-@app.route('/jhi/info')
+@app.route('/test/info')
+def getTestInfo():
+    info = gcal.hent_events('sfo')
+    return jsonify(info)
+
+@app.route('/jih/info')
 def getJhiInfo():
     info = gcal.hent_events('jhi')
     return jsonify(info)

@@ -5,26 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/reset.css') }}"> <!-- CSS reset -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/style.css') }}"> <!-- Resource style -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     
-    <title>Romkalender</title>
+	<title>Booking</title>
+	<!-- Laget av Rikard Knive -->
 </head>
 <body>
 
     <div class="nhhs-banner">
         <nav>
             <div class="nav-wrapper cntrtxt">
-                <a class = "brand-logo center">Booking</a>
+                <a class = "brand-logo center">
+					<!-- Laste animasjon -->
+					<div class="preloader-wrapper active">
+						<div class="spinner-layer spinner-blue-only">
+							<div class="circle-clipper left">
+							<div class="circle"></div>
+							</div>
+						</div>
+					</div>
+				</a>
+
                 <a href='https://nhhs.no/' ><img id="logo" src ="{{ url_for('static',filename='img/nhh_logo_rz.png') }}"></a>
+				
                 <ul id="nav-mobile" class="left">
-                <li><a href="/sfo">SFO</a></li>
-                <li><a href ="/jhi">JIH</a></li>
-                <li><a href ="/kpmg">KPMG</a></li>
+					<li><a class='dropdown-trigger' href='#' data-target='dropdown1' ><i class="material-icons">menu</i></a></li>
                 </ul>
+				
             </div>
-        </nav>
+		</nav>
+		
+
+		 <!-- Dropdown Structure -->
+		<ul id='dropdown1' class='dropdown-content'>
+			<li><a class="btn-nav" data-url="sfo/info" data-title="SFO">SFO</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a class="btn-nav" data-url="jih/info" data-title="JHI">JIH</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a class="btn-nav" data-url="kpmg/info" data-title="KPMG">KPMG</a></li>
+		</ul>
     </div>
 
     <div class="div1">
@@ -65,31 +88,31 @@
 	<div class="events">
 		<ul>
 			<li class="events-group">
-				<div class="top-info"><span>Mandag <span class="mon"></span></span></div>
+				<div class="top-info"><span>Monday <span class="mon"></span></span></div>
 				<ul class="monday-events"></ul>
 			</li>
 			<li class="events-group">
-                <div class="top-info"><span>Tirsdag  <span class="tue"></span> </span></div>	
+                <div class="top-info"><span>Tuesday  <span class="tue"></span> </span></div>	
 					<ul class="tuesday-events"></ul>
 				</li>
 			<li class="events-group">
-                <div class="top-info"><span>Onsdag <span class="wed"></span> </span></div>
+                <div class="top-info"><span>Wednesday <span class="wed"></span> </span></div>
 					<ul class="wednesday-events"></ul>
 				</li>
 			<li class="events-group">
-					<div class="top-info"><span>Torsdag <span class="thu"></span> </span></div>
+					<div class="top-info"><span>Thursday <span class="thu"></span> </span></div>
 					<ul class="thursday-events"></ul>
 				</li>
 			<li class="events-group">
-					<div class="top-info"><span>Fredag <span class="fri"></span> </span></div>
+					<div class="top-info"><span>Friday <span class="fri"></span> </span></div>
 					<ul class="friday-events"></ul>
 				</li>
 			<li class="events-group">
-                    <div class="top-info"><span>Lørdag <span class="sat"></span> </span></div>
+                    <div class="top-info"><span>Saturday <span class="sat"></span> </span></div>
 					<ul class="saturday-events"></ul>
 				</li>
 			<li class="events-group">
-                <div class="top-info"><span>Søndag <span class="sun"></span> </span></div>
+                <div class="top-info"><span>Sunday <span class="sun"></span> </span></div>
 				<ul class="sunday-events"></ul>
             </li>
 		</ul>
@@ -119,6 +142,7 @@
 <script type="text/javascript" src="{{ url_for('static',filename='styles/js/modernizr.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static',filename='styles/js/jquery-3.0.0.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static',filename='styles/js/date_fns.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='styles/js/materialize.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static',filename='styles/js/myMain.js') }}"></script>
    
 </body>
