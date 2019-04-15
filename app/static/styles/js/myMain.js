@@ -163,6 +163,7 @@ $(document).ready(function(){
                 var eventString = [
                     '<li class="single-event ' + this.posisjon + '" pos="' + this.posisjon +'" data-start="' + this.start_tid + '" data-end="' + this.slutt_tid + '" data-content="' + this.beskrivelse + '" data-event="event-' + this.farge + '" style="top:' + eventTop + 'px; height:' + eventHeight +'px;">',
                     '<a ' + (this.varighet <= 1.5 ? 'class="mindre"' : '') + '>',
+                    '<span class="event-date">'+this.start_tid+' - '+this.slutt_tid+'</span>',
                     '<em ' + (this.varighet <= 1.5 ? 'class="event-name mindre" >' : 'class="event-name" >') + this.tittel + '</em>',
                     '</a>',
                     '</li>'
