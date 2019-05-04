@@ -49,7 +49,7 @@
 }
 	
 }
-.div1 .btn-small {
+.btn-small {
 	// Color
 	@import "../components/color-variables";
 	@import "../components/color-classes";
@@ -76,6 +76,7 @@
 	margin-top: -33px;
 	float: right;
 	margin-right:18px;
+	font-size: 1.3rem;
 
 	@media #{$medium-and-down}{
 		height: 15px;
@@ -374,7 +375,7 @@ Main Components
 			/* top position and height will be set using js */
 			width: calc(100% + 2px);
 			left: -1px;
-			box-shadow: 0 10px 20px rgba(#000, .1), inset 0 -3px 0 rgba(#000, .2);
+			//box-shadow: 0 10px 20px rgba(#000, .1), inset 0 -3px 0 rgba(#000, .2);
 			/* reset style */
 			flex-shrink: 1;
 			height: auto;
@@ -453,7 +454,7 @@ Main Components
 	font-size: 2.4rem;
 
 	@include MQ(M) {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 	}
 }
 

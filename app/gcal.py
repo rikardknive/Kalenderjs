@@ -161,7 +161,7 @@ def hent_events(cal):
             'ukedag': ukedag,
             'ukenummer': ukenummer,
             'aar': year,
-            'farge': i,
+            'farge': 1, #i,
             'varighet': varighet,
             'posisjon': defaultPos
         }
@@ -174,7 +174,7 @@ def hent_events(cal):
         else: 
             i = 1
     
-    eventer = check_for_overlaps(eventer) 
+    #eventer = check_for_overlaps(eventer) 
     return eventer
 
 
